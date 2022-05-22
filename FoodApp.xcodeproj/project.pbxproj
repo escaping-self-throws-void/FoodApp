@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		CF2116A128394D0F003768AD /* FoodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2116A028394D0F003768AD /* FoodAppApp.swift */; };
-		CF2116A328394D0F003768AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2116A228394D0F003768AD /* ContentView.swift */; };
 		CF2116A528394D10003768AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2116A428394D10003768AD /* Assets.xcassets */; };
 		CF2116A828394D10003768AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2116A728394D10003768AD /* Preview Assets.xcassets */; };
 		CF2116AF283962D8003768AD /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2116AE283962D8003768AD /* FoodCardView.swift */; };
 		CF738CD12839767800E09CA9 /* MenuScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CD02839767700E09CA9 /* MenuScrollView.swift */; };
 		CF738CD428397A4700E09CA9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CD328397A4700E09CA9 /* Model.swift */; };
+		CF738CE2283A9F1F00E09CA9 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */; };
+		CF738CE4283A9F5000E09CA9 /* TabHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF21169D28394D0F003768AD /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2116A028394D0F003768AD /* FoodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppApp.swift; sourceTree = "<group>"; };
-		CF2116A228394D0F003768AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF2116A428394D10003768AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF2116A728394D10003768AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF2116AE283962D8003768AD /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
 		CF738CD02839767700E09CA9 /* MenuScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScrollView.swift; sourceTree = "<group>"; };
 		CF738CD328397A4700E09CA9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
+		CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,10 @@
 		CF21169F28394D0F003768AD /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
-				CF738CD228397A2A00E09CA9 /* Model */,
 				CF2116A028394D0F003768AD /* FoodAppApp.swift */,
+				CF738CD228397A2A00E09CA9 /* Model */,
+				CF738CE5283A9F9100E09CA9 /* View */,
 				CF738CD02839767700E09CA9 /* MenuScrollView.swift */,
-				CF2116AE283962D8003768AD /* FoodCardView.swift */,
-				CF2116A228394D0F003768AD /* ContentView.swift */,
 				CF2116A428394D10003768AD /* Assets.xcassets */,
 				CF2116A628394D10003768AD /* Preview Content */,
 			);
@@ -82,6 +83,16 @@
 				CF738CD328397A4700E09CA9 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CF738CE5283A9F9100E09CA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF2116AE283962D8003768AD /* FoodCardView.swift */,
+				CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */,
+				CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF738CE2283A9F1F00E09CA9 /* CartButtonView.swift in Sources */,
 				CF738CD428397A4700E09CA9 /* Model.swift in Sources */,
-				CF2116A328394D0F003768AD /* ContentView.swift in Sources */,
 				CF2116A128394D0F003768AD /* FoodAppApp.swift in Sources */,
+				CF738CE4283A9F5000E09CA9 /* TabHeaderView.swift in Sources */,
 				CF738CD12839767800E09CA9 /* MenuScrollView.swift in Sources */,
 				CF2116AF283962D8003768AD /* FoodCardView.swift in Sources */,
 			);

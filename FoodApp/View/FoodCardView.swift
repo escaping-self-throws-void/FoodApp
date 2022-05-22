@@ -34,13 +34,7 @@ struct FoodCardView: View {
                             .font(.footnote)
                             .foregroundColor(.gray)
                             .padding(.trailing, 35)
-                        Button(action: {
-                            isPressed = true
-                            cartItems.append(food.id)
-                            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                                isPressed = false
-                            }
-                        }) {
+                        Button(action: addToCart) {
                             Text(isPressed ? "Added +1" : food.price)
                                 .foregroundColor(.white)
                         }
@@ -50,10 +44,19 @@ struct FoodCardView: View {
                     }.padding(.bottom, 30)
                 }
             }.background(.white)
-            .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height*0.55)
+            .frame(width: UIScreen.main.bounds.width - 50,
+                   height: UIScreen.main.bounds.height * 0.55)
             .cornerRadius(20)
             .overlay(RoundedRectangle(cornerRadius: 20).stroke(.gray, lineWidth: 1))
             .shadow(color: .gray, radius: 4, x: 0, y: 8)
+    }
+    
+    private func addToCart() {
+        isPressed = true
+        cartItems.append(food.id)
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            isPressed = false
+        }
     }
 }
 
@@ -62,46 +65,3 @@ struct FoodCardView_Previews: PreviewProvider {
         FoodCardView(cartItems: .constant([]), food: (tabsItems.first?.foods.first)!)
     }
 }
-
-
-
-
-
-
-
-//var body: some View {
-//
-//    VStack {
-//            Image("pizza")
-//                .resizable()
-//                .frame(height: 250, alignment: .top)
-//
-//            VStack(alignment: .leading) {
-//                Text("Hawaiian")
-//                    .font(.system(size: 28, weight: .heavy, design: .default))
-//                    .padding(.bottom, 3)
-//                Text("Chicken, Mozarella, Pineapple, Domino's sause")
-//                    .font(.footnote)
-//                    .foregroundColor(.gray)
-//                    .multilineTextAlignment(.leading)
-//
-//                Spacer()
-//                HStack(spacing: 45) {
-//                    Text("200 gramms, 35 cm")
-//                        .font(.footnote)
-//                        .foregroundColor(.gray)
-//                    Button(action: {}) {
-//                        Text("55 usd")
-//                            .foregroundColor(.white)
-//                    }
-//                    .frame(width: 120, height: 50)
-//                    .background(.black)
-//                    .cornerRadius(30)
-//                }.padding(.bottom, 30)
-//            }
-//        }.background(.white)
-//        .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height*0.55)
-//        .cornerRadius(20)
-//        .shadow(color: .gray, radius: 4, x: 0, y: 8)
-//
-//}
