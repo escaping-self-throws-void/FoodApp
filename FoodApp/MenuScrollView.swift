@@ -15,26 +15,7 @@ struct MenuScrollView: View {
         
         ZStack(alignment: .bottomTrailing) {
             VStack {
-                ScrollViewReader { proxy in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .center, spacing: 30) {
-                            
-                            ForEach(tabsItems) { tab in
-                                VStack {
-                                    Text(tab.tab)
-                                        .font(.largeTitle)
-                                        .foregroundColor(currentTab == tab.id ? .black : .gray)
-                                }
-                                .onTapGesture {
-                                    withAnimation(.easeOut){
-                                        currentTab = tab.id
-                                        proxy.scrollTo(currentTab, anchor: .topTrailing)
-                                    }
-                                }
-                            }
-                        }
-                    }.padding([.horizontal, .top], 15)
-                }
+                TabHeaderView(currentTab: $currentTab)
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     
@@ -99,9 +80,37 @@ struct CartButtonView: View {
                     .background(.green)
                     .foregroundColor(.white)
                     .cornerRadius(9)
+                    .opacity(cartItems.count > 0 ? 1 : 0)
             }
             
         }.padding([.bottom, .trailing], 35)
+    }
+}
+
+struct TabHeaderView: View {
+    @Binding var currentTab: String
+    
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .center, spacing: 30) {
+                    
+                    ForEach(tabsItems) { tab in
+                        VStack {
+                            Text(tab.tab)
+                                .font(.largeTitle)
+                                .foregroundColor(currentTab == tab.id ? .black : .gray)
+                        }
+                        .onTapGesture {
+                            withAnimation(.easeOut){
+                                currentTab = tab.id
+                                proxy.scrollTo(currentTab, anchor: .topTrailing)
+                            }
+                        }
+                    }
+                }
+            }.padding([.horizontal, .top], 15)
+        }
     }
 }
 

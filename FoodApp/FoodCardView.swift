@@ -19,7 +19,6 @@ struct FoodCardView: View {
             Image(food.image)
                     .resizable()
                     .frame(height: 250, alignment: .top)
-            
                 VStack(alignment: .leading) {
                     Text(food.title)
                         .font(.system(size: 28, weight: .heavy, design: .default))
@@ -28,7 +27,7 @@ struct FoodCardView: View {
                         .font(.footnote)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
-                    
+                
                     Spacer()
                     HStack(spacing: 45) {
                         Text(food.size)
