@@ -17,9 +17,9 @@ struct MenuScrollView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 TabView {
-                    Image("monday")
-                    Image("sunday")
-                    Image("saturday")
+                    Image("monday1")
+                    Image("sunday2")
+                    Image("saturday3")
                 }.tabViewStyle(.page)
                     .frame(height: 400)
                     .background(Image("bg").aspectRatio(contentMode: .fill))
