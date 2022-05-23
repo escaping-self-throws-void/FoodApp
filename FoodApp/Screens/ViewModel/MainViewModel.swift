@@ -1,19 +1,20 @@
 //
-//  MenuViewModel.swift
+//  MainViewModel.swift
 //  FoodApp
 //
 //  Created by Paul Matar on 23/05/2022.
 //
 
-import Foundation
+import SwiftUI
 
-@MainActor final class MenuViewModel: ObservableObject {
+@MainActor final class MainViewModel: ObservableObject {
     
     @Published private(set) var tabs: [Tab] = []
     @Published private(set) var coffee: Coffee?
     @Published var currentTab = ""
     @Published var cartItems: [String] = []
-    
+    @Published var opacity: Double = 0
+    @Published var yOffset: CGFloat = 0
     
     private let service: APIProtocol
     
