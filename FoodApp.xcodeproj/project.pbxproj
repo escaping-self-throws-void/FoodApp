@@ -105,7 +105,6 @@
 		CF738CE5283A9F9100E09CA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CF738CF0283AD1B800E09CA9 /* ViewModel */,
 				CF2116AE283962D8003768AD /* FoodCardView.swift */,
 				CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */,
 				CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */,
@@ -149,6 +148,7 @@
 		CF738CF9283B6E5600E09CA9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CF738CF0283AD1B800E09CA9 /* ViewModel */,
 				CF738CD02839767700E09CA9 /* MenuScrollView.swift */,
 			);
 			path = Screens;
