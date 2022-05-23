@@ -12,9 +12,16 @@
 		CF2116A828394D10003768AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2116A728394D10003768AD /* Preview Assets.xcassets */; };
 		CF2116AF283962D8003768AD /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2116AE283962D8003768AD /* FoodCardView.swift */; };
 		CF738CD12839767800E09CA9 /* MenuScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CD02839767700E09CA9 /* MenuScrollView.swift */; };
-		CF738CD428397A4700E09CA9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CD328397A4700E09CA9 /* Model.swift */; };
+		CF738CD428397A4700E09CA9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CD328397A4700E09CA9 /* Food.swift */; };
 		CF738CE2283A9F1F00E09CA9 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */; };
 		CF738CE4283A9F5000E09CA9 /* TabHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */; };
+		CF738CEB283ABFB700E09CA9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF738CEA283ABFB700E09CA9 /* Alamofire */; };
+		CF738CF4283B63B400E09CA9 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CF3283B63B400E09CA9 /* Tab.swift */; };
+		CF738CF6283B662700E09CA9 /* TestCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CF5283B662700E09CA9 /* TestCoffee.swift */; };
+		CF738CFB283B6EA300E09CA9 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CFA283B6EA300E09CA9 /* MenuViewModel.swift */; };
+		CF738CFD283B704A00E09CA9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CFC283B704A00E09CA9 /* APIConstants.swift */; };
+		CF738CFF283B735400E09CA9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CFE283B735400E09CA9 /* APIService.swift */; };
+		CF738D02283B8D7400E09CA9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF738D01283B8D7400E09CA9 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +31,14 @@
 		CF2116A728394D10003768AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF2116AE283962D8003768AD /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
 		CF738CD02839767700E09CA9 /* MenuScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScrollView.swift; sourceTree = "<group>"; };
-		CF738CD328397A4700E09CA9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CF738CD328397A4700E09CA9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
 		CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderView.swift; sourceTree = "<group>"; };
+		CF738CF3283B63B400E09CA9 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		CF738CF5283B662700E09CA9 /* TestCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoffee.swift; sourceTree = "<group>"; };
+		CF738CFA283B6EA300E09CA9 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		CF738CFC283B704A00E09CA9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CF738CFE283B735400E09CA9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF738D02283B8D7400E09CA9 /* SDWebImageSwiftUI in Frameworks */,
+				CF738CEB283ABFB700E09CA9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,11 +73,12 @@
 		CF21169F28394D0F003768AD /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
-				CF2116A028394D0F003768AD /* FoodAppApp.swift */,
+				CF738CF7283B6E3F00E09CA9 /* App */,
 				CF738CD228397A2A00E09CA9 /* Model */,
-				CF738CE5283A9F9100E09CA9 /* View */,
-				CF738CD02839767700E09CA9 /* MenuScrollView.swift */,
-				CF2116A428394D10003768AD /* Assets.xcassets */,
+				CF738CE8283ABE8C00E09CA9 /* Services */,
+				CF738CE5283A9F9100E09CA9 /* Views */,
+				CF738CF9283B6E5600E09CA9 /* Screens */,
+				CF738CF8283B6E4A00E09CA9 /* Resources */,
 				CF2116A628394D10003768AD /* Preview Content */,
 			);
 			path = FoodApp;
@@ -80,19 +95,63 @@
 		CF738CD228397A2A00E09CA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CF738CD328397A4700E09CA9 /* Model.swift */,
+				CF738CF5283B662700E09CA9 /* TestCoffee.swift */,
+				CF738CD328397A4700E09CA9 /* Food.swift */,
+				CF738CF3283B63B400E09CA9 /* Tab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CF738CE5283A9F9100E09CA9 /* View */ = {
+		CF738CE5283A9F9100E09CA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF738CF0283AD1B800E09CA9 /* ViewModel */,
 				CF2116AE283962D8003768AD /* FoodCardView.swift */,
 				CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */,
 				CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */,
 			);
-			path = View;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF738CE8283ABE8C00E09CA9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF738CFC283B704A00E09CA9 /* APIConstants.swift */,
+				CF738CFE283B735400E09CA9 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF738CF0283AD1B800E09CA9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF738CFA283B6EA300E09CA9 /* MenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF738CF7283B6E3F00E09CA9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CF2116A028394D0F003768AD /* FoodAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CF738CF8283B6E4A00E09CA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF2116A428394D10003768AD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF738CF9283B6E5600E09CA9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CF738CD02839767700E09CA9 /* MenuScrollView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +170,10 @@
 			dependencies = (
 			);
 			name = FoodApp;
+			packageProductDependencies = (
+				CF738CEA283ABFB700E09CA9 /* Alamofire */,
+				CF738D01283B8D7400E09CA9 /* SDWebImageSwiftUI */,
+			);
 			productName = FoodApp;
 			productReference = CF21169D28394D0F003768AD /* FoodApp.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +202,10 @@
 				Base,
 			);
 			mainGroup = CF21169428394D0F003768AD;
+			packageReferences = (
+				CF738CE9283ABFB700E09CA9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CF738D00283B8D7400E09CA9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = CF21169E28394D0F003768AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,9 +233,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF738CE2283A9F1F00E09CA9 /* CartButtonView.swift in Sources */,
-				CF738CD428397A4700E09CA9 /* Model.swift in Sources */,
+				CF738CFF283B735400E09CA9 /* APIService.swift in Sources */,
+				CF738CFB283B6EA300E09CA9 /* MenuViewModel.swift in Sources */,
+				CF738CD428397A4700E09CA9 /* Food.swift in Sources */,
 				CF2116A128394D0F003768AD /* FoodAppApp.swift in Sources */,
 				CF738CE4283A9F5000E09CA9 /* TabHeaderView.swift in Sources */,
+				CF738CF4283B63B400E09CA9 /* Tab.swift in Sources */,
+				CF738CFD283B704A00E09CA9 /* APIConstants.swift in Sources */,
+				CF738CF6283B662700E09CA9 /* TestCoffee.swift in Sources */,
 				CF738CD12839767800E09CA9 /* MenuScrollView.swift in Sources */,
 				CF2116AF283962D8003768AD /* FoodCardView.swift in Sources */,
 			);
@@ -371,6 +443,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF738CE9283ABFB700E09CA9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CF738D00283B8D7400E09CA9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF738CEA283ABFB700E09CA9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF738CE9283ABFB700E09CA9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CF738D01283B8D7400E09CA9 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF738D00283B8D7400E09CA9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF21169528394D0F003768AD /* Project object */;
 }
