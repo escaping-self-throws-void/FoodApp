@@ -14,6 +14,10 @@ protocol APIProtocol {
 
 final class APIService: APIProtocol {
     
+    static let shared = APIService()
+    
+    private init(){}
+    
     func fetchTabs(completion: @escaping (Result<[Tab], APError>) -> Void) {
         AF.request(APIUrls.mockURL).validate().responseDecodable(of: [Tab].self) { response in
             switch response.result {
@@ -36,9 +40,5 @@ final class APIService: APIProtocol {
         }
     }
     
-    
-    static let shared = APIService()
-    
-    private init(){}
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1E68E928524ACE00D18385 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF1E68E828524ACE00D18385 /* Alamofire */; };
+		CF1E68EC28524B0300D18385 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF1E68EB28524B0300D18385 /* SDWebImageSwiftUI */; };
 		CF2116A128394D0F003768AD /* FoodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2116A028394D0F003768AD /* FoodAppApp.swift */; };
 		CF2116A528394D10003768AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2116A428394D10003768AD /* Assets.xcassets */; };
 		CF2116A828394D10003768AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2116A728394D10003768AD /* Preview Assets.xcassets */; };
@@ -15,16 +17,15 @@
 		CF738CD428397A4700E09CA9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CD328397A4700E09CA9 /* Food.swift */; };
 		CF738CE2283A9F1F00E09CA9 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CE1283A9F1F00E09CA9 /* CartButtonView.swift */; };
 		CF738CE4283A9F5000E09CA9 /* TabHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */; };
-		CF738CEB283ABFB700E09CA9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF738CEA283ABFB700E09CA9 /* Alamofire */; };
 		CF738CF4283B63B400E09CA9 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CF3283B63B400E09CA9 /* Tab.swift */; };
 		CF738CF6283B662700E09CA9 /* TestCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CF5283B662700E09CA9 /* TestCoffee.swift */; };
 		CF738CFB283B6EA300E09CA9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CFA283B6EA300E09CA9 /* MainViewModel.swift */; };
 		CF738CFD283B704A00E09CA9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CFC283B704A00E09CA9 /* APIConstants.swift */; };
 		CF738CFF283B735400E09CA9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738CFE283B735400E09CA9 /* APIService.swift */; };
-		CF738D02283B8D7400E09CA9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF738D01283B8D7400E09CA9 /* SDWebImageSwiftUI */; };
 		CF738D0D283BF16000E09CA9 /* Extension + View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738D0C283BF16000E09CA9 /* Extension + View.swift */; };
 		CF738D0F283C1F2200E09CA9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738D0E283C1F2200E09CA9 /* MenuView.swift */; };
 		CF738D11283C27BC00E09CA9 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF738D10283C27BC00E09CA9 /* PromoView.swift */; };
+		CFF6BBA2283FC7600022C198 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF6BBA1283FC7600022C198 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CF738D0C283BF16000E09CA9 /* Extension + View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + View.swift"; sourceTree = "<group>"; };
 		CF738D0E283C1F2200E09CA9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CF738D10283C27BC00E09CA9 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
+		CFF6BBA1283FC7600022C198 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF738D02283B8D7400E09CA9 /* SDWebImageSwiftUI in Frameworks */,
-				CF738CEB283ABFB700E09CA9 /* Alamofire in Frameworks */,
+				CF1E68EC28524B0300D18385 /* SDWebImageSwiftUI in Frameworks */,
+				CF1E68E928524ACE00D18385 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,7 @@
 				CF738CE3283A9F5000E09CA9 /* TabHeaderView.swift */,
 				CF738D10283C27BC00E09CA9 /* PromoView.swift */,
 				CF738D0E283C1F2200E09CA9 /* MenuView.swift */,
+				CFF6BBA1283FC7600022C198 /* SwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,8 +191,8 @@
 			);
 			name = FoodApp;
 			packageProductDependencies = (
-				CF738CEA283ABFB700E09CA9 /* Alamofire */,
-				CF738D01283B8D7400E09CA9 /* SDWebImageSwiftUI */,
+				CF1E68E828524ACE00D18385 /* Alamofire */,
+				CF1E68EB28524B0300D18385 /* SDWebImageSwiftUI */,
 			);
 			productName = FoodApp;
 			productReference = CF21169D28394D0F003768AD /* FoodApp.app */;
@@ -220,8 +223,8 @@
 			);
 			mainGroup = CF21169428394D0F003768AD;
 			packageReferences = (
-				CF738CE9283ABFB700E09CA9 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CF738D00283B8D7400E09CA9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				CF1E68E728524ACE00D18385 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CF1E68EA28524B0300D18385 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = CF21169E28394D0F003768AD /* Products */;
 			projectDirPath = "";
@@ -263,6 +266,7 @@
 				CF738CF6283B662700E09CA9 /* TestCoffee.swift in Sources */,
 				CF738CD12839767800E09CA9 /* MainView.swift in Sources */,
 				CF2116AF283962D8003768AD /* FoodCardView.swift in Sources */,
+				CFF6BBA2283FC7600022C198 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,33 +469,33 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CF738CE9283ABFB700E09CA9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		CF1E68E728524ACE00D18385 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.6.1;
 			};
 		};
-		CF738D00283B8D7400E09CA9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		CF1E68EA28524B0300D18385 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CF738CEA283ABFB700E09CA9 /* Alamofire */ = {
+		CF1E68E828524ACE00D18385 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CF738CE9283ABFB700E09CA9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = CF1E68E728524ACE00D18385 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		CF738D01283B8D7400E09CA9 /* SDWebImageSwiftUI */ = {
+		CF1E68EB28524B0300D18385 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CF738D00283B8D7400E09CA9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = CF1E68EA28524B0300D18385 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
